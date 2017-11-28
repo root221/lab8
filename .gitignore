@@ -36,3 +36,5 @@ catkin_ws/src/CMakeLists.txt
 drake_viewer.out
 core
 .~lock*
+
+.ipynb_checkpoints/
