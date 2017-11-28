@@ -26,8 +26,14 @@ void  cloud_cb (const sensor_msgs::PointCloud2ConstPtr& input)
   //Exercise : Calculate the location of the object (coordinate average)
   double x=0; double y=0;double z=0;
   ///Write your algorithm/////////////////
-
-
+  for (int i=0;i<cloud_size;i++){
+    x += cloud->points[i].x; 
+    y += cloud->points[i].y; 
+    z += cloud->points[i].z;
+  }
+  x = x / cloud_size;
+  y = y / cloud_size;
+  z = z / cloud_size;
   /////////////////////////////////////////
 
 
